@@ -8,6 +8,7 @@ const CollectionItem = ({item,addItem , removeItem})=> {
     const {id,name,price,imageUrl} = item;
     return (
         <div className="collection-item" key={id}>    
+            <CustomButton inverted onClick={()=> addItem(item)}>ADD TO CART</CustomButton>
             <div className="image" style={{backgroundImage:`url(${imageUrl})`}}>
             </div>
             
@@ -15,7 +16,7 @@ const CollectionItem = ({item,addItem , removeItem})=> {
                 <span className="name">{name}</span>
                 <span className="price">${price}</span>
             </div>  
-            <CustomButton inverted onClick={()=> addItem(item)}>ADD TO CART</CustomButton>
+            
         </div>
     );
 
